@@ -1,0 +1,33 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 15px;
+    width: 100%;
+}
+
+.form label {
+    display: flex;
+    gap: 5px;
+}
+
+.form span {
+    font-size: 18px;
+}
+
+.form input {
+    padding: 8px 5px 8px 5px;
+}
+
+.btn {
+    border: unset;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: blue;
+    color: antiquewhite;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 700;
+    width: inherit;
+}

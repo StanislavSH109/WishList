@@ -1,0 +1,26 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 1px 1px 5px 1px grey;
+}
+
+.card__title {
+  text-transform: uppercase;
+}
+
+.card__is-active {
+  outline: 2px solid green;
+  padding: 5px 10px 5px 10px;
+  width: 25%;
+  border-radius: 5px;
+  cursor: pointer;
+  color: green;
+}
+
+.card__is-not-active {
+  padding: 5px 10px 5px 0px;
+  cursor: pointer;
+}
