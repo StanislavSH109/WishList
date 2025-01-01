@@ -6,7 +6,7 @@
         <div class="card__title">{{ item.title }}</div>
         <div class="card__description">{{ item.description }}</div>
         <div class="card__is-actived">
-          <div :class="{'card__is-active': item.isDone, 'card__is-not-active': !item.isDone}">
+          <div :class="{ 'card__is-active': item.isDone, 'card__is-not-active': !item.isDone }">
             {{ item.isDone ? 'Исполнено' : 'Не исполнено' }}
           </div>
         </div>
