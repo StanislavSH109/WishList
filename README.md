@@ -1,2 +1,2 @@
 # WishList
-Interaction between components
+## Interaction between components
