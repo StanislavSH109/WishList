@@ -29,15 +29,6 @@ const addCard = () => {
   console.log(newCard.value)
 }
 
-// const setTitle = (event) => {
-//   const value = event.target.value;
-//   newCard.value.title = value;
-// }
-
-// const setDescription = (event) => {
-//   const value = event.target.value;
-//   newCard.value.description = value;
-// }
 </script>
 
 <style scope></style>
