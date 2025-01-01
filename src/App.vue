@@ -6,7 +6,7 @@
 </template>
 
 <script setup>
-import FormCreate from './components/FormCreate.vue';
+import FormCreate from './components/FormCreate.vue'
 import WishList from './components/WishList.vue'
 </script>
 

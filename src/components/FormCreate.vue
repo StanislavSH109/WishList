@@ -2,21 +2,21 @@
   <h2 class="title-form">Форма заполнения {{ newCard.title }}</h2>
   <div class="container">
     <form @submit.prevent="addCard" class="form">
-        <label for="name">
-            <span>Название:</span>
-            <input type="text" name="name" id="name" v-model="newCard.title">
-        </label>
-        <label for="description">
-            <span>Описание:</span>
-            <input type="text" name="description" id="description" v-model="newCard.description">
-        </label>
-        <button class="btn" type="submit">Добавить</button>
+      <label for="name">
+        <span>Название:</span>
+        <input type="text" name="name" id="name" v-model="newCard.title" />
+      </label>
+      <label for="description">
+        <span>Описание:</span>
+        <input type="text" name="description" id="description" v-model="newCard.description" />
+      </label>
+      <button class="btn" type="submit">Добавить</button>
     </form>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
 
 const newCard = ref({
   id: 0,
@@ -26,7 +26,7 @@ const newCard = ref({
 })
 
 const addCard = () => {
-  console.log(newCard.value);
+  console.log(newCard.value)
 }
 
 // const setTitle = (event) => {
@@ -40,6 +40,4 @@ const addCard = () => {
 // }
 </script>
 
-<style scope>
-
-</style>
+<style scope></style>

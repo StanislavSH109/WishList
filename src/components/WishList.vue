@@ -2,18 +2,21 @@
   <div class="container">
     <h1 class="title">Wish List</h1>
     <div class="wrapper">
-      <div class="card" v-for="(item) in cards" :key="item.id">
+      <div class="card" v-for="item in cards" :key="item.id">
         <div class="card__title">{{ item.title }}</div>
         <div class="card__description">{{ item.description }}</div>
-        <div class="card__is-active" v-if="item.isDone">Исполнено</div>
-        <div class="card__is-not-active" v-else>Не исполнено</div>
+        <div class="card__is-actived">
+          <div :class="{'card__is-active': item.isDone, 'card__is-not-active': !item.isDone}">
+            {{ item.isDone ? 'Исполнено' : 'Не исполнено' }}
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
 
 const cards = ref([
   {
@@ -55,6 +58,4 @@ const cards = ref([
 ])
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
