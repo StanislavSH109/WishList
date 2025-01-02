@@ -1,15 +1,15 @@
 <template>
   <div class="container">
     <div class="wrapper">
-      <WishList :cards="cards" @click-by-card="openCardForEdit"/>
+      <WishList :cards="cards" @click-by-card="openCardForEdit" />
     </div>
-    <FormEdit :card="{}"/>
+    <FormEdit :card="cardForEdit" @set-card="updateCard" @save-card="saveCard" />
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import FormCreate from './components/FormCreate.vue'
+import FormEdit from './components/FormCreate.vue'
 import WishList from './components/WishList.vue'
 
 const cards = ref([
@@ -31,39 +31,26 @@ const cards = ref([
     description: 'Хочу получить клавиаутуру к новому году',
     isDone: false,
   },
-  {
-    id: 4,
-    title: 'Колонки',
-    description: 'Хочу получить крутые колонки к новому году',
-    isDone: true,
-  },
-  {
-    id: 5,
-    title: 'Монитор',
-    description: 'Хочу получить монитор Samsung к новому году',
-    isDone: false,
-  },
-  {
-    id: 6,
-    title: 'Вещи для бега',
-    description: 'Хочу получить вещи для бега на улице к новому году',
-    isDone: true,
-  },
 ])
 
 const cardForEdit = ref({
   id: 0,
   title: '',
   description: '',
-  completed: false
+  completed: false,
 })
 
-const addCard = (card) => {
-  cards.value.push(card)
+const saveCard = () => {
+  const newCard = Object.assign({}, cardForEdit.value)
+  cards.value = cards.value.map((el) => (el.id === newCard.id ? newCard : el))
+}
+
+const updateCard = (card) => {
+  cardForEdit.value = card
 }
 
 const openCardForEdit = (card) => {
-
+  cardForEdit.value = Object.assign({}, card)
 }
 </script>
 
