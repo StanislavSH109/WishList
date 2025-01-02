@@ -3,7 +3,7 @@
         <div class="card__title">{{ card.title }}</div>
         <div class="card__description">{{ card.description }}</div>
         <div class="card__is-actived">
-          <div :class="{ 'card__is-active': card.isDone, 'card__is-not-active': !card.isDone }">
+          <div :class="{'card__is-active': card.isDone, 'card__is-not-active': !card.isDone}">
             {{ card.isDone ? 'Исполнено' : 'Не исполнено' }}
           </div>
         </div>
@@ -19,8 +19,6 @@ const props = defineProps({
     type: Object,
   },
 })
-
-props.index
 </script>
 
 <style scope></style>

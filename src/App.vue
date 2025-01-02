@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    <WishList />
+    <div class="wrapper">
+      <WishList />
+    </div>
     <FormCreate />
   </div>
 </template>

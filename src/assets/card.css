@@ -1,6 +1,7 @@
 .card {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 15px;
   padding: 15px;
   border-radius: 8px;
@@ -9,6 +10,11 @@
 
 .card__title {
   text-transform: uppercase;
+}
+
+.card__is-actived {
+  display: flex;
+  align-items: flex-end;
 }
 
 .card__is-active {
