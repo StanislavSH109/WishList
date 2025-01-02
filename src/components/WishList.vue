@@ -1,5 +1,5 @@
 <template>
-    <app-card v-for="(item, index) in cards" :card="item" :index="index" :key="item.id" />
+  <app-card v-for="(item, index) in cards" :card="item" :index="index" :key="item.id" />
 </template>
 
 <script setup>
@@ -46,6 +46,4 @@ const cards = ref([
 ])
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

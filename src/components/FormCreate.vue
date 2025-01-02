@@ -28,7 +28,6 @@ const newCard = ref({
 const addCard = () => {
   console.log(newCard.value)
 }
-
 </script>
 
 <style scope></style>
