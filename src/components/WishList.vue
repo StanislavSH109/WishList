@@ -7,8 +7,8 @@ import AppCard from './AppCard.vue'
 
 const props = defineProps({
   cards: {
-    type: Array
-  }
+    type: Array,
+  },
 })
 </script>
 

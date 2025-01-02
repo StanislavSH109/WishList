@@ -18,6 +18,8 @@
 <script setup>
 import { ref } from 'vue'
 
+const emit = defineEmits(['set-card'])
+
 const newCard = ref({
   id: 0,
   title: '',
@@ -26,6 +28,7 @@ const newCard = ref({
 })
 
 const addCard = () => {
+  emit('set-card', newCard.value)
   console.log(newCard.value)
 }
 </script>

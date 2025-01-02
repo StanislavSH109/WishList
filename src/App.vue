@@ -1,9 +1,9 @@
 <template>
   <div class="container">
     <div class="wrapper">
-      <WishList />
+      <WishList :cards="cards"/>
     </div>
-    <FormCreate />
+    <FormCreate @set-card="addCard"/>
   </div>
 </template>
 
@@ -50,6 +50,10 @@ const cards = ref([
     isDone: true,
   },
 ])
+
+const addCard = (card) => {
+  cards.value.push(card)
+}
 </script>
 
 <style scope>

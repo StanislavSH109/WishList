@@ -19,7 +19,7 @@ const props = defineProps({
     type: Object,
     default() {
       return { message: 'hey' }
-    }
+    },
   },
 })
 </script>
