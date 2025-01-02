@@ -1,9 +1,9 @@
 <template>
   <div class="container">
     <div class="wrapper">
-      <WishList :cards="cards"/>
+      <WishList :cards="cards" @click-by-card="openCardForEdit"/>
     </div>
-    <FormCreate @set-card="addCard"/>
+    <FormEdit :card="{}"/>
   </div>
 </template>
 
@@ -51,8 +51,19 @@ const cards = ref([
   },
 ])
 
+const cardForEdit = ref({
+  id: 0,
+  title: '',
+  description: '',
+  completed: false
+})
+
 const addCard = (card) => {
   cards.value.push(card)
+}
+
+const openCardForEdit = (card) => {
+
 }
 </script>
 
