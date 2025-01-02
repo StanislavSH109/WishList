@@ -17,6 +17,9 @@ const props = defineProps({
   },
   card: {
     type: Object,
+    default() {
+      return { message: 'hey' }
+    }
   },
 })
 </script>
